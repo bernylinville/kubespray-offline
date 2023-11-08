@@ -18,7 +18,7 @@ run ./start-nginx.sh
 run ./setup-offline.sh
 
 # setup python
-run ./setup-py.sh
+# run ./setup-py.sh
 
 # start private registry
 run ./start-registry.sh

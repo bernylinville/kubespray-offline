@@ -56,9 +56,11 @@ trusted-host = localhost
 EOF
 }
 
-if [ -e /etc/redhat-release ]; then
-    setup_yum_repos
-else
-    setup_deb_repos
-fi
-setup_pypi_mirror
+# if [ -e /etc/redhat-release ]; then
+#     setup_yum_repos
+# else
+#     setup_deb_repos
+# fi
+# setup_pypi_mirror
+
+setup_yum_repos
