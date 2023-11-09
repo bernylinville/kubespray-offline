@@ -1,6 +1,6 @@
 NAME = kubespray-offline-ansible
 
-PROXY = --build-arg http_proxy=$(http_proxy) --build-arg https_proxy=$(http_proxy)
+PROXY = --build-arg http_proxy="http://10.0.12.103:7890" --build-arg https_proxy="http://10.0.12.103:7890"
 
 all: Dockerfile
 	nerdctl image build $(PROXY) -t $(NAME) .

@@ -1,0 +1,54 @@
+all:
+  vars:
+    ansible_user: pukka
+    ansible_ssh_port: 2406
+  hosts:
+    node1:
+      ansible_host: 10.0.12.89
+      ip: 10.0.12.89
+      access_ip: 10.0.12.89
+    node2:
+      ansible_host: 10.0.12.90
+      ip: 10.0.12.90
+      access_ip: 10.0.12.90
+    node3:
+      ansible_host: 10.0.12.91
+      ip: 10.0.12.91
+      access_ip: 10.0.12.91
+    node4:
+      ansible_host: 10.0.12.92
+      ip: 10.0.12.92
+      access_ip: 10.0.12.92
+    node5:
+      ansible_host: 10.0.12.93
+      ip: 10.0.12.93
+      access_ip: 10.0.12.93
+    node6:
+      ansible_host: 10.0.12.94
+      ip: 10.0.12.94
+      access_ip: 10.0.12.94
+  children:
+    kube_control_plane:
+      hosts:
+        node1:
+        node2:
+        node3:
+    kube_node:
+      hosts:
+        node1:
+        node2:
+        node3:
+        node4:
+        node5:
+        node6:
+    etcd:
+      hosts:
+        node1:
+        node2:
+        node3:
+    k8s_cluster:
+      children:
+        kube_control_plane:
+        kube_node:
+    calico_rr:
+      hosts: {}

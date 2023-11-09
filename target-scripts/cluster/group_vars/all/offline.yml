@@ -1,8 +1,8 @@
 ---
 ## Global Offline settings
-http_server: "http://YOUR_HOST"
+http_server: "http://10.0.12.106"
 ### Private Container Image Registry
-registry_host: "YOUR_HOST:35000"
+registry_host: "10.0.12.106:35000"
 # Insecure registries for containerd
 containerd_registries_mirrors:
   - prefix: "{{ registry_host }}"
