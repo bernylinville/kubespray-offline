@@ -78,6 +78,7 @@ sudo cp config.toml /etc/containerd/
 echo "==> Start containerd"
 sudo systemctl daemon-reload
 sudo systemctl enable --now containerd
+sudo systemctl enable --now buildkit
 
 # Install cni plugins
 echo "==> Install CNI plugins"

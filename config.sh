@@ -10,3 +10,5 @@ docker=${docker:-/usr/local/bin/nerdctl}
 
 # Run ansible in container?
 ansible_in_container=${ansible_in_container:-true}
+
+http_proxy=${http_proxy:-http://10.0.12.103:7890}

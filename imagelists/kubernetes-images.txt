@@ -1,8 +1,8 @@
 ##kubesphere-images
-kubesphere/ks-installer:v3.4.0
-kubesphere/ks-apiserver:v3.4.0
-kubesphere/ks-console:v3.4.0
-kubesphere/ks-controller-manager:v3.4.0
+kubesphere/ks-installer:v3.4.1
+kubesphere/ks-apiserver:v3.4.1
+kubesphere/ks-console:v3.4.1
+kubesphere/ks-controller-manager:v3.4.1
 kubesphere/kubectl:v1.20.0
 kubesphere/kubefed:v0.8.1
 kubesphere/tower:v0.2.1
@@ -26,9 +26,9 @@ openpolicyagent/gatekeeper:v3.5.2
 ##openpitrix-images
 kubesphere/openpitrix-jobs:v3.3.2
 ##kubesphere-devops-images
-kubesphere/devops-apiserver:ks-v3.4.0
-kubesphere/devops-controller:ks-v3.4.0
-kubesphere/devops-tools:ks-v3.4.0
+kubesphere/devops-apiserver:ks-v3.4.1
+kubesphere/devops-controller:ks-v3.4.1
+kubesphere/devops-tools:ks-v3.4.1
 kubesphere/ks-jenkins:v3.4.0-2.319.3-1
 jenkins/inbound-agent:4.10-2
 kubesphere/builder-base:v3.2.2

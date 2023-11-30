@@ -1,6 +1,7 @@
 # kubespray: required_pkgs
 device-mapper-libs
 nss
+conntrack
 conntrack-tools
 container-selinux
 libseccomp

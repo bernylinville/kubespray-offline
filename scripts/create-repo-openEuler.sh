@@ -18,17 +18,6 @@ PKGS=$(cat pkglist/openEuler/*.txt | grep -v "^#" | sort | uniq)
 CACHEDIR=cache/cache-rpms
 mkdir -p $CACHEDIR
 
-# IS_RHEL8=false
-# if [ "$VERSION_MAJOR" = "7" ]; then
-#     RT="sudo repotrack -a x86_64 -p $CACHEDIR"
-# else
-#     # RHEL 8
-#     IS_RHEL8=true
-#     RT="sudo dnf download --resolve --alldeps --downloaddir $CACHEDIR"
-# fi
-
-#YD="yumdownloader --destdir=$CACHEDIR -y"
-
 if [ "$VERSION_MAJOR" = "22.03" ]; then
     RT="sudo dnf download --resolve --alldeps --downloaddir $CACHEDIR"
 fi
@@ -50,18 +39,5 @@ mkdir -p $RPMDIR
 
 echo "==> createrepo"
 createrepo -d $RPMDIR || exit 1
-
-#echo "==> Create repo tarball"
-#mkdir -p outputs/offline-files
-#(cd outputs && tar cvzf offline-files/offline-rpm-repo.tar.gz rpms)
-
-# if $IS_RHEL8; then
-#     cd $RPMDIR
-#     #createrepo_c . || exit 1
-#     echo "==> repo2module"
-#     LANG=C repo2module -s stable . modules.yaml || exit 1
-#     echo "==> modifyrepo"
-#     modifyrepo_c --mdtype=modules modules.yaml repodata/ || exit 1
-# fi
 
 echo "create-repo done."

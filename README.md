@@ -96,7 +96,7 @@ Create and activate venv:
     $ source ~/.venv/default/bin/activate
 
 Note: For Ubuntu 20.04 and RHEL/CentOS 8, you need to use python 3.9.
-    
+
     # Example
     $ python3.9 -m venv ~/.venv/default
     $ source ~/.venv/default/bin/activate
